@@ -1,0 +1,526 @@
+.site-header {
+	width: 100%;
+	height: 28px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+.site-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	margin-top: 3px;
+	padding-bottom: 2px;
+	text-align: center;
+	font-size: 55%;
+}
+
+.site-wrapper {
+	flex: 1;
+	-webkit-flex: 1;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+.site-body {
+	max-width: 1100px;
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+}
+
+.site-navigation {
+	width: 1100px;
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+.site-navigation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row nowrap;
+}
+
+.site-navigation li a {
+	padding: 0;
+	margin: 0 0 1px 10px;
+	font-size: 70%;
+	font-weight: bold;
+	font-style: italic;
+	vertical-align: baseline;
+}
+
+.site-content {
+	flex: 1;
+	-webkit-flex: 1;
+	padding: 10px;
+}
+
+.site-sidebar {
+	width: 20%;
+	padding: 10px 5px 10px 0;
+	font-size: 13px;
+}
+
+.site-sidebar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.site-sidebar > ul {
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: column nowrap;
+	-webkit-flex-flow: column nowrap;
+}
+
+@media (max-width: 880px) {
+	.site-sidebar {
+		width: 100%;
+		padding-left: 5px;
+	}
+
+	.site-sidebar > ul {
+		flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
+	}
+
+	.site-sidebar > ul > li {
+		width: 33.333%;
+	}
+}
+@media (max-width: 640px) {
+	.site-content {
+		padding: 5px 3px;
+	}
+
+	.site-sidebar > ul > li {
+		width: 50%;
+	}
+}
+@media (max-width: 374px) {
+	.site-sidebar > ul > li {
+		width: 100%;
+	}
+}
+
+.site-sidebar li {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.site-sidebar h4 {
+	font-size: 13px;
+}
+
+.site-sidebar li ul {
+	margin-left: 5px;
+}
+
+.site-sidebar li li ul {
+	margin-left: 1em;
+}
+
+.page-links,
+.paginate-links {
+	text-align:center;
+	font-size: 70%
+}
+
+.paginate-links,
+.paginate-links .current {
+	cursor: default;
+}
+
+.page-links > span,
+.page-links > a,
+.paginate-links > span,
+.paginate-links > a {
+	display: inline-block;
+	padding-top: 2px;
+	margin-top: 3px;
+	margin-right: 3px;
+	min-width: 23px;
+	text-align: center;
+	text-decoration:none;
+	border:1px solid #ccc;
+	color: #555;
+	background-color: #ccc;
+}
+
+.page-links > a,
+.paginate-links > a {
+	background-color: white;
+}
+
+.page-links > a:hover,
+.paginate-links > a:hover {
+	background-color: #f7f7f7;
+}
+
+.paginate-links .dots,
+.paginate-links .prev,
+.paginate-links .next {
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.paginate-links a.prev:hover {
+	background-color: transparent;
+}
+.paginate-links a.next:hover {
+	background-color: transparent;
+}
+
+.pagenation {
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row nowrap;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	width: 100%
+}
+
+.pagenation a {
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row nowrap;
+	font-size: 13px;
+}
+
+.pagenation .title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	flex-shrink: 1;
+	-webkit-flex-shrink: 1;
+	margin-top: 3px;
+}
+
+.pagenation .image {
+	flex-shrink: 0;
+	-webkit-flex-shrink: 0;
+	margin: 0 4px;
+}
+
+.pagenation .prev .title {
+	text-align: left;
+}
+
+.pagenation .next .title {
+	text-align: right;
+}
+
+.breadcrumbs .image,
+.pagenation .image,
+.paginate-links .image {
+	display: inline-block;
+	width: 7px;
+	height: 12px;
+	vertical-align: -5%;
+}
+
+.breadcrumbs .next {
+	background-position: 0px 0;
+}
+
+.pagenation .prev .image,
+.paginate-links .prev .image {
+	background-position: -7px 0;
+}
+
+.pagenation .next .image,
+.paginate-links .next .image {
+	background-position: -14px 0;
+}
+
+.pagenation .prev:hover > .image,
+.paginate-links .prev:hover {
+	background-position: -21px 0;
+}
+
+.pagenation .next:hover > .image,
+.paginate-links .next:hover {
+	background-position: -28px 0;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+.site-header {
+	background-color: #888;
+}
+
+.site-footer a {
+	color: #777;
+}
+
+.site-navigation li a {
+	color: #d7d7d7;
+}
+.site-navigation li a:hover {
+	color: #ccc;
+}
+
+.page-links > a,
+.paginate-links > a {
+	color: #409cf7;
+}
+
+.page-links > a:hover,
+.paginate-links > a:hover {
+	color: #48bcff;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+.site-navigation ul.sub-menu {
+	display: none;
+}
+
+.site-navigation .search-field {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0 0 0 18px;
+	margin: 2px 6px 0 0;
+	width: 4px;
+	border: none;
+	border-radius: 10px;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition:         width 400ms ease, background 400ms ease;
+}
+
+.site-navigation .search-field:hover {
+	background-position: 0 -16px;
+}
+
+.site-navigation .search-field:focus {
+	background-position: 0 -32px;
+	background-color: #fff;
+	cursor: text;
+	width: 240px;
+	outline-offset: -2px;
+}
+
+.site-navigation .search-field::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+.site-navigation .search-submit {
+	display: none;
+}
+
+.content-body {
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #e7e7e7;
+}
+
+.content-body-front {
+	margin: 30px auto;
+	width: 300px;
+	height: 200px;
+}
+
+.content-body h1 {
+	margin: 0px 0 8px;
+}
+
+.content-header {
+	margin-bottom: 1px;
+}
+
+.content-footer {
+	margin: 1px 0 10px 0;
+}
+
+.breadcrumbs {
+	font-size: 13px;
+}
+
+.breadcrumbs .next {
+	margin: 0 10px 0 4px;
+}
+
+.content-section {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.content-section li {
+	margin-top: 6px;
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #e7e7e7;
+}
+
+.content-section li:first-child {
+	margin-top: 0;
+}
+
+.content-section .title {
+	padding: 0;
+	margin: 0 0 5px 0;
+	font-size: 95%
+}
+
+.content-section .body {
+	clear: both;
+	padding: 0;
+	margin: 0;
+	font-size: 90%
+}
+
+.content-section .body p {
+	margin-bottom: 0px;
+}
+
+.content-time {
+	float: right;
+	margin-left: 1em;
+	font-size: 80%
+}
+
+.comment-box {
+	margin-top: 20px;
+}
+
+.comment-box,
+.comment-box ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.comment-box .children {
+	margin-left: 20px;
+}
+
+.comment-body {
+	margin-top: 6px;
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #e7e7e7;
+}
+
+.comment-content p {
+	margin-bottom: 8px;
+}
+
+.comment-metadata {
+	float: right;
+	font-size: 80%;
+}
+
+.comment-author .fn {
+	display: block;
+	float: left;
+	font-size: 80%;
+}
+
+.comment-author .fn a {
+	color: #289cf7;
+}
+.comment-author .fn a:hover,
+.comment-author .fn a:active {
+	color: #48bcff;
+}
+
+.comment-author img {
+	display: block;
+	float: left;
+	margin-right: 3pt;
+}
+
+.comment-meta a {
+	color: #333;
+}
+
+.comment-box .says {
+	display: none;
+}
+
+.comment-awaiting-moderation {
+	display: block;
+	float: left;
+	margin-left: 5px;
+	margin-bottom: 0;
+	font-size: 80%;
+}
+
+.comment-content {
+	clear: both;
+	margin-right: 35px;
+	padding-top: 5px;
+	font-size: 80%;
+}
+
+.comment-box .reply{
+	line-height: 16px;
+	text-align: right;
+	margin: -21pt 0 0 auto;
+}
+
+.comment-box .reply a {
+	font-size: 80%
+}
+
+.comment-respond {
+	margin-top: 6px;
+	padding: 0 10px;
+	background-color: #fff;
+	border: 1px solid #e7e7e7;
+}
+
+.comment-form input {
+	margin: 0 3px 3px 0;
+}
+
+.comment-form input,
+.comment-form textarea {
+	padding: 2px;
+}
+
+.comment-form input[type="submit"] {
+	display: block;
+	margin: 1px 0 0 auto;
+	padding: 0;
+	color: #289cf7;
+	background-color: white;
+}
+
+.comment-form input[type="submit"]:hover,
+.comment-form input[type="submit"]:active {
+	color: #48bcff;
+}
+
+.logged-in-as {
+	font-size: 80%;
+	text-align: right;
+}
+
+.comment-reply-title {
+	font-size: 94%;
+	text-align: right;
+}

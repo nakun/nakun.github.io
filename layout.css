@@ -495,7 +495,7 @@
 	-webkit-flex-flow: row nowrap;
 	justify-content: space-between;
 	-webkit-justify-content: space-between;
-	width: 100%
+	width: 100%;
 	margin-top: 3px;
 }
 
@@ -545,4 +545,113 @@
 
 .pagenation .next:hover > .image {
 	background-position: -28px 0;
+}
+
+@media print {
+	body {
+		background: none !important;
+		font-size: 11.25pt;
+	}
+
+	.site-navigation .button,
+	.site-navigation .search-field,
+	.site-sidebar,
+	.site-navigation li:not(:first-child),
+
+	.pagenation,
+	.paginate-links,
+	.comment-edit-link,
+	.comment-body .reply,
+	.comment-respond,
+	button,
+	input,
+	textarea {
+		display: none;
+	}
+
+	.content-body,
+	.site-header,
+	.site-footer,
+	.site-navigation,
+
+	 {
+		background: none !important;
+	}
+
+	body,
+	blockquote,
+	blockquote cite,
+	blockquote small,
+	label,
+	a,
+	.breadcrumbs,
+
+	.comment-author,
+	.comment-metadata,
+	.comment-metadata a,
+	.comment-notes,
+	.comment-awaiting-moderation {
+		color: #000 !important;
+	}
+
+	pre,
+	abbr[title],
+	table,
+	th,
+	td {
+		border-color: #eaeaea !important;
+	}
+
+	.site-body {
+		margin: 0 7.6923%;
+	}
+
+	.site-header {
+		padding: 7.6923% 7.6923% 3.84615%;
+		background: transparent;
+	}
+
+	.site-footer {
+		position: fixed;
+		bottom: 0;
+	}
+
+	.content-body,
+	.content-body-front {
+		padding: 0;
+		border: none;
+	}
+
+	.page-links > a {
+		display: none;
+	}
+
+	.page-links > span {
+		border: none;
+		background: transparent;
+	}
+
+	.comment-body,
+	.content-section li {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.breadcrumbs .image {
+		background-position: 0 0;
+	}
+
+	.content-section li,
+	.comment-body {
+		border: none;
+		border-top: 1px solid #eaeaea;
+	}
+
+	.content-section li:first-child {
+		border-top: none;
+	}
+
+	.post-thumbnail img {
+		margin: 0;
+	}
 }

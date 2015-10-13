@@ -1,0 +1,12 @@
+.site-footer {
+	position: relative;
+}
+
+.site-navigation .button {
+	display: none;
+}
+
+.site-navigation .search-field {
+	display: inline-block;
+	width: 80px;
+}

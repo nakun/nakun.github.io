@@ -95,7 +95,7 @@ ul {
 .breadcrumbs .image,
 .pagenation .image,
 .paginate-links .image,
-.site-navigation .image {
+.site-navigation .button {
 	background: url('http://nakun.github.io/icons.svg') no-repeat;
 }
 

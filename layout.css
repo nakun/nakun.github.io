@@ -307,6 +307,8 @@
 	right: 6px;
 	width:16px;
 	height:16px;
+	padding: 0;
+	margin: 0;
 	cursor:pointer;
 	border-style:none;
 	background-position: 0 -12px;
@@ -325,7 +327,7 @@
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
-	background-color: transparent;
+	background-color: #fff;
 	background-position: 5px center;
 	cursor: pointer;
 	padding: 0 0 0 18px;
@@ -333,15 +335,14 @@
 	width: 0px;
 	border: none;
 	border-radius: 10px;
+	outline-offset: -2px;
 	-webkit-transition: width 400ms ease, background 400ms ease;
 	transition:			width 400ms ease, background 400ms ease;
 }
 
 .site-navigation .search-field:focus {
-	background-color: #fff;
 	cursor: text;
 	width: 240px;
-	outline-offset: -2px;
 }
 
 .site-navigation .search-field::-webkit-search-cancel-button {

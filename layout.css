@@ -5,6 +5,7 @@
 	display: -webkit-flex;
 	justify-content: center;
 	-webkit-justify-content: center;
+	background-color: #888;
 }
 
 .site-footer {
@@ -15,6 +16,10 @@
 	padding-bottom: 2px;
 	text-align: center;
 	font-size: 55%;
+}
+
+.site-footer a {
+	color: #777;
 }
 
 .site-wrapper {
@@ -33,6 +38,12 @@
 	display: -webkit-flex;
 	flex-flow: row wrap;
 	-webkit-flex-flow: row wrap;
+}
+
+.site-content {
+	flex: 1;
+	-webkit-flex: 1;
+	padding: 10px;
 }
 
 .site-navigation {
@@ -65,12 +76,69 @@
 	font-weight: bold;
 	font-style: italic;
 	vertical-align: baseline;
+	color: #d7d7d7;
 }
 
-.site-content {
-	flex: 1;
-	-webkit-flex: 1;
-	padding: 10px;
+.site-navigation li a:hover {
+	color: #ccc;
+}
+
+.site-navigation ul.sub-menu {
+	display: none;
+}
+
+.site-navigation .button {
+	z-index: 3;
+	position: absolute;
+	display: inline-block;
+	top: 6px;
+	right: 10px;
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	border-style: none;
+	background-position: 0 -12px;
+}
+
+.site-navigation .button:hover {
+	background-position: -16px -12px;
+}
+
+.site-navigation .search-field {
+	display: none;
+	z-index: 4;
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	background-color: #fff;
+	background-position: 5px center;
+	cursor: pointer;
+	padding: 0 0 0 18px;
+	margin: 2px 10px 0 0;
+	width: 0px;
+	border: none;
+	border-radius: 10px;
+	outline-offset: -2px;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition:			width 400ms ease, background 400ms ease;
+}
+
+.site-navigation .search-field:focus {
+	cursor: text;
+	width: 240px;
+}
+
+.site-navigation .search-field::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+.site-navigation .search-submit {
+	display: none;
 }
 
 .site-sidebar {
@@ -141,218 +209,6 @@
 	margin-left: 1em;
 }
 
-.page-links,
-.paginate-links {
-	text-align:center;
-	font-size: 70%
-}
-
-.paginate-links,
-.paginate-links .current {
-	cursor: default;
-}
-
-.page-links > span,
-.page-links > a,
-.paginate-links > span,
-.paginate-links > a {
-	display: inline-block;
-	padding-top: 2px;
-	margin-top: 3px;
-	margin-right: 3px;
-	min-width: 23px;
-	text-align: center;
-	text-decoration:none;
-	border:1px solid #ccc;
-	color: #555;
-	background-color: #ccc;
-}
-
-.page-links > a,
-.paginate-links > a {
-	background-color: white;
-}
-
-.page-links > a:hover,
-.paginate-links > a:hover {
-	background-color: #f7f7f7;
-}
-
-.paginate-links .dots,
-.paginate-links .prev,
-.paginate-links .next {
-	border-color: transparent;
-	background-color: transparent;
-}
-
-.paginate-links a.prev:hover {
-	background-color: transparent;
-}
-.paginate-links a.next:hover {
-	background-color: transparent;
-}
-
-.pagenation {
-	display: flex;
-	display: -webkit-flex;
-	flex-flow: row nowrap;
-	-webkit-flex-flow: row nowrap;
-	justify-content: space-between;
-	-webkit-justify-content: space-between;
-	width: 100%
-}
-
-.pagenation a {
-	display: flex;
-	display: -webkit-flex;
-	flex-flow: row nowrap;
-	-webkit-flex-flow: row nowrap;
-	font-size: 13px;
-}
-
-.pagenation .title {
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	flex-shrink: 1;
-	-webkit-flex-shrink: 1;
-	margin-top: 3px;
-}
-
-.pagenation .image {
-	flex-shrink: 0;
-	-webkit-flex-shrink: 0;
-	margin: 0 4px;
-}
-
-.pagenation .prev .title {
-	text-align: left;
-}
-
-.pagenation .next .title {
-	text-align: right;
-}
-
-.breadcrumbs .image,
-.pagenation .image,
-.paginate-links .image {
-	display: inline-block;
-	width: 7px;
-	height: 12px;
-	vertical-align: -5%;
-}
-
-.breadcrumbs .next {
-	background-position: 0px 0;
-}
-
-.pagenation .prev .image,
-.paginate-links .prev .image {
-	background-position: -7px 0;
-}
-
-.pagenation .next .image,
-.paginate-links .next .image {
-	background-position: -14px 0;
-}
-
-.pagenation .prev:hover > .image,
-.paginate-links .prev:hover {
-	background-position: -21px 0;
-}
-
-.pagenation .next:hover > .image,
-.paginate-links .next:hover {
-	background-position: -28px 0;
-}
-
-/* ----------------------------------------------------------------------------- */
-
-.site-header {
-	background-color: #888;
-}
-
-.site-footer a {
-	color: #777;
-}
-
-.site-navigation li a {
-	color: #d7d7d7;
-}
-.site-navigation li a:hover {
-	color: #ccc;
-}
-
-.page-links > a,
-.paginate-links > a {
-	color: #409cf7;
-}
-
-.page-links > a:hover,
-.paginate-links > a:hover {
-	color: #48bcff;
-}
-
-/* ----------------------------------------------------------------------------- */
-
-.site-navigation ul.sub-menu {
-	display: none;
-}
-
-.site-navigation .button {
-	z-index: 3;
-	position: absolute;
-	display: inline-block;
-	top: 6px;
-	right: 10px;
-	width: 16px;
-	height: 16px;
-	padding: 0;
-	margin: 0;
-	cursor: pointer;
-	border-style: none;
-	background-position: 0 -12px;
-}
-
-.site-navigation .button:hover {
-	background-position: -16px -12px;
-}
-
-.site-navigation .search-field {
-	display: none;
-	z-index: 4;
-	position: absolute;
-	top: 0;
-	right: 0;
-	-webkit-appearance: textfield;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
-	background-color: #fff;
-	background-position: 5px center;
-	cursor: pointer;
-	padding: 0 0 0 18px;
-	margin: 2px 10px 0 0;
-	width: 0px;
-	border: none;
-	border-radius: 10px;
-	outline-offset: -2px;
-	-webkit-transition: width 400ms ease, background 400ms ease;
-	transition:			width 400ms ease, background 400ms ease;
-}
-
-.site-navigation .search-field:focus {
-	cursor: text;
-	width: 240px;
-}
-
-.site-navigation .search-field::-webkit-search-cancel-button {
-	-webkit-appearance: none;
-}
-
-.site-navigation .search-submit {
-	display: none;
-}
-
 .content-body {
 	padding: 10px;
 	background-color: #fff;
@@ -377,12 +233,22 @@
 	margin: 1px 0 10px 0;
 }
 
+.breadcrumbs .image,
+.pagenation .image,
+.paginate-links .image {
+	display: inline-block;
+	width: 7px;
+	height: 12px;
+	vertical-align: -5%;
+}
+
 .breadcrumbs {
 	font-size: 13px;
 }
 
-.breadcrumbs .next {
-	margin: 0 10px 0 4px;
+.breadcrumbs .image {
+	margin: 0 4px 0 4px;
+	background-position: 0px 0;
 }
 
 .content-section {
@@ -546,4 +412,130 @@
 .comment-reply-title {
 	font-size: 94%;
 	text-align: right;
+}
+
+.page-links,
+.paginate-links {
+	text-align:center;
+	font-size: 70%
+}
+
+.page-links > span,
+.paginate-links .current,
+.paginate-links .dots {
+	cursor: default;
+}
+
+.page-links > span,
+.page-links > a,
+.paginate-links > span,
+.paginate-links > a {
+	display: inline-block;
+	padding-top: 2px;
+	margin-top: 3px;
+	margin-right: 3px;
+	min-width: 23px;
+	text-align: center;
+	text-decoration:none;
+	border:1px solid #ccc;
+	color: #555;
+	background-color: #ccc;
+}
+
+.page-links > a,
+.paginate-links > a {
+	background-color: white;
+	color: #409cf7;
+}
+
+.page-links > a:hover,
+.paginate-links > a:hover {
+	background-color: #f7f7f7;
+	color: #48bcff;
+}
+
+.paginate-links .dots,
+.paginate-links .prev,
+.paginate-links .next {
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.paginate-links .prev .image {
+	background-position: -7px 0;
+}
+
+.paginate-links .next .image {
+	background-position: -14px 0;
+}
+
+.paginate-links .prev:hover {
+	background-position: -21px 0;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.paginate-links .next:hover {
+	background-position: -28px 0;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.pagenation {
+	display: inlineflex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row nowrap;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	width: 100%
+	margin-top: 3px;
+}
+
+.pagenation a {
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row nowrap;
+	font-size: 13px;
+}
+
+.pagenation .title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	flex-shrink: 1;
+	-webkit-flex-shrink: 1;
+}
+
+.pagenation .image {
+	flex-shrink: 0;
+	-webkit-flex-shrink: 0;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-top: 3px;
+}
+
+.pagenation .prev .title {
+	text-align: left;
+}
+
+.pagenation .next .title {
+	text-align: right;
+}
+
+.pagenation .prev .image {
+	background-position: -7px 0;
+}
+
+.pagenation .next .image {
+	background-position: -14px 0;
+}
+
+.pagenation .prev:hover > .image {
+	background-position: -21px 0;
+}
+
+.pagenation .next:hover > .image {
+	background-position: -28px 0;
 }

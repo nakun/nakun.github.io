@@ -465,7 +465,9 @@
 
 .paginate-links .dots,
 .paginate-links .prev,
-.paginate-links .next {
+.paginate-links .next,
+.paginate-links .prev:hover,
+ .paginate-links .next:hover {
 	border-color: transparent;
 	background-color: transparent;
 }
@@ -478,16 +480,12 @@
 	background-position: -14px 0;
 }
 
-.paginate-links .prev:hover {
+.paginate-links .prev .image:hover {
 	background-position: -21px 0;
-	border-color: transparent;
-	background-color: transparent;
 }
 
-.paginate-links .next:hover {
+.paginate-links .next .image:hover {
 	background-position: -28px 0;
-	border-color: transparent;
-	background-color: transparent;
 }
 
 .pagenation {
